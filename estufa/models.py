@@ -28,5 +28,7 @@ class Alerta(models.Model):
         ordering = ['-data_hora']
 
     def __str__(self):
-        
+
         return f"{self.get_tipo_display()} - {self.data_hora}"
+    
+    

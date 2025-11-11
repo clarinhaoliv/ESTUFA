@@ -13,7 +13,7 @@ class LeituraSerializer(serializers.ModelSerializer):
         fields = ['id', 'temperatura', 'umidade', 'data_hora']
 
 class AlertaSerializer(serializers.ModelSerializer):
-    tipo_display = serializers.CharField(source='get_tipo_display', read_oly = True)
+    tipo_display = serializers.CharField(source='get_tipo_display', read_only=True)
 
     class Meta:
         model = Alerta
